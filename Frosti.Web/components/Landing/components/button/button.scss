@@ -1,0 +1,58 @@
+.shift-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 5px 40px;
+
+  transition: {
+    property: color, background-color, border-color;
+    timing-function: ease-out;
+    duration: 0.3s;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &__color {
+    &--default {
+      //background: radial-gradient(circle at 10% 20%, rgb(0, 93, 133) 0%, rgb(0, 181, 149) 100%);
+      background: linear-gradient(90deg, rgb(0, 93, 133), rgb(0, 181, 149));
+      color: var(--global-colors-white);
+
+      &:hover {
+        //background: var(--global-colors-froztiButton);
+      }
+    }
+
+    &--secondary {
+      background-color: var(--global-colors-white);
+      color: var(--global-colors-charade);
+      border: 2px solid black;
+
+      &:hover {
+        //background-color: var(--global-colors-nevada);
+        //color: var(--global-colors-white);
+      }
+    }
+  }
+
+  &__size {
+    &--default {
+      font-size: var(--global-font-size-small);
+      line-height: 1.43;
+      height: 48px;
+    }
+  }
+}
