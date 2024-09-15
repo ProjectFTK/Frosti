@@ -41,6 +41,7 @@ export default function Intro() {
       .then((response) => {
         alert('You\'re added!');
         setIsClicked(false)
+        setEmail('')
       })
       .catch(() => {
         setIsClicked(false)
