@@ -74,6 +74,7 @@ export default function Intro() {
                   radius='sm'
                   placeholder="Your email"
                   size='lg'
+                  value={email}
                   onChange={(event) => setEmail(event.currentTarget.value)}
                   onKeyDown={handleKeyDown}
                 />
