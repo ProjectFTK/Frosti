@@ -2,7 +2,7 @@ import http from '../http';
 import IUser from '../types/user';
 
 const createBetaRequest = (email: string) => {
-    return http.get(`user/BetaRequest?email=${email}`);
+    return http.post(`user/BetaRequest?email=${email}`);
 };
 
 const getAuthorById = (username: string) => {

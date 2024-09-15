@@ -46,7 +46,7 @@ export default function Content() {
         isStart={true}
         line={true}
         imgSrc='/imgs/versions.png'
-        title='Intelligent Reminders'
+        title='Intelligent'
         soon
         content=
         {
@@ -59,7 +59,7 @@ export default function Content() {
         isStart={false}
         line={true}
         imgSrc='/imgs/educators.png'
-        title='Data-Driven Insights'
+        title='Data-Driven'
         soon
         content=
         {
