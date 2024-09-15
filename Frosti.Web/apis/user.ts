@@ -1,8 +1,8 @@
 import http from '../http';
 import IUser from '../types/user';
 
-const addContorUserToWaitlist = (email: string) => {
-    return http.get(`user/AddContorUserToWaitlist?email=${email}`);
+const createBetaRequest = (email: string) => {
+    return http.get(`user/BetaRequest?email=${email}`);
 };
 
 const getAuthorById = (username: string) => {
@@ -16,7 +16,7 @@ const currentUser = () => {
 const UserApi = {
     currentUser,
     getAuthorById,
-    addContorUserToWaitlist,
+    createBetaRequest,
 };
 
 export default UserApi;

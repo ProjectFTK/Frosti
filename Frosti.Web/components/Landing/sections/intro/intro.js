@@ -15,7 +15,6 @@ import {
   Button,
   TextInput,
 } from '@mantine/core';
-import Link from 'next/link';
 export default function Intro() {
   const component = 'shift-intro';
   const isMobile = useMediaQuery(`(max-width: ${em(750)})`);
@@ -38,7 +37,7 @@ export default function Intro() {
     }
 
     setIsClicked(true)
-    UserApi.addContorUserToWaitlist(email)
+    UserApi.createBetaRequest(email)
       .then((response) => {
         alert('You\'re added!');
         setIsClicked(false)
