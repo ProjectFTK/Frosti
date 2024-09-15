@@ -61,15 +61,15 @@ export default function Intro() {
           <Container componentClass={component} size={'hero'}>
             <div
               className={`${component}__title`} style={{ textAlign: 'center' }}>
-              Frosti the AI: Standups, Reimagined
+              Frosti the AI: Transforming Standups
             </div>
             <Text fw={1000} align='center' mb='2rem'>
               Skip the standup meeting and share updates on your own time
             </Text>
             <p style={{ textAlign: 'center', fontWeight: '500' }}>Want to try it out? <p style={{ color: '#90ee90', display: 'inline' }}>7</p>/10 spots available</p>
             <Grid columns={isMobile ? 2 : 20}>
-              <Grid.Col span={4}></Grid.Col>
-              <Grid.Col span={10}>
+              <Grid.Col span={isMobile ? 2 :4}></Grid.Col>
+              <Grid.Col span={isMobile ? 2 :10}>
                 <TextInput
                   radius='sm'
                   placeholder="Your email"
@@ -78,7 +78,7 @@ export default function Intro() {
                   onKeyDown={handleKeyDown}
                 />
               </Grid.Col>
-              <Grid.Col span={2}>
+              <Grid.Col span={isMobile ? 2 :2}>
                 <Button
                   onClick={handleJoinWaitlist}
                   loading={isClicked}
@@ -90,7 +90,7 @@ export default function Intro() {
                 </Button>
 
               </Grid.Col>
-              <Grid.Col span={4}></Grid.Col>
+              <Grid.Col span={isMobile ? 2 :4}></Grid.Col>
             </Grid>
           </Container>
           <hr color='gray' />

@@ -32,7 +32,7 @@ export default function Content() {
       <Body
         isStart={false}
         line={true}
-        imgSrc='/imgs/teamsslack.png'
+        imgSrc='/imgs/integrated.png'
         title='Integrated'
         soon
         content=
