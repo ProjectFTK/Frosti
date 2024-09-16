@@ -9,11 +9,11 @@ export default function Content() {
         isStart={false}
         line={true}
         imgSrc='/imgs/student.png'
-        title='Reduced Meeting Fatigue'
+        title='Reduced Fatigue'
         content=
         {
           <p>
-            Tired of the daily standup meeting? Let Frosti collect your updates async, so you can share progress when it suits you.
+            Frosti collects your updates async, and creates a high level rundown so everyone stays up to date without the hassle of standups.
           </p>
         }
       />
@@ -21,7 +21,7 @@ export default function Content() {
         isStart={true}
         line={true}
         imgSrc='/imgs/blonde.png'
-        title='Less Pressure, More Honesty'
+        title='More Honesty'
         content=
         {
           <p>
@@ -32,19 +32,6 @@ export default function Content() {
       <Body
         isStart={false}
         line={true}
-        imgSrc='/imgs/integrated.png'
-        title='Integrated'
-        soon
-        content=
-        {
-          <p>
-            If Frosti fits your team's needs, we’re happy to integrate with platforms like Teams, Slack, and more for seamless collaboration.
-          </p>
-        }
-      />
-      <Body
-        isStart={true}
-        line={true}
         imgSrc='/imgs/versions.png'
         title='Intelligent'
         soon
@@ -52,6 +39,19 @@ export default function Content() {
         {
           <p>
             Frosti can auto update tasks and follow up on blockers, ensuring that progress continues smoothly without needing to chase people for updates.
+          </p>
+        }
+      />
+      <Body
+        isStart={true}
+        line={true}
+        imgSrc='/imgs/integrated.png'
+        title='Integrated'
+        soon
+        content=
+        {
+          <p>
+            If Frosti fits your team's needs, we’re happy to integrate with platforms like Teams, Slack, and more for seamless collaboration.
           </p>
         }
       />

@@ -63,7 +63,7 @@ export default function Intro() {
               className={`${component}__title`} style={{ textAlign: 'center' }}>
               Frosti the AI: Transforming Standups
             </div>
-            <Text fw={1000} align='center' mb='2rem'>
+            <Text fw={800} align='center' mb='2rem'>
               Skip the standup meeting and share updates on your own time
             </Text>
             <p style={{ textAlign: 'center', fontWeight: '500' }}>Want to try it out? <p style={{ color: '#90ee90', display: 'inline' }}>7</p>/10 spots available</p>
