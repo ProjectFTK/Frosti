@@ -66,7 +66,7 @@ export default function Intro() {
             <Text fw={800} align='center' mb='2rem'>
               Let Frosti automate your task management, and keep you organized— so you can focus on getting things done.
             </Text>
-            <p style={{ textAlign: 'center', fontWeight: '500' }}>Sign up to try the beta for free. <p style={{ color: '#90ee90', display: 'inline' }}>5</p> /10 spots.</p>
+            <p style={{ textAlign: 'center', fontWeight: '500' }}>Sign up to try the beta. <p style={{ color: '#90ee90', display: 'inline' }}>5</p> /10 spots.</p>
             <Grid columns={isMobile ? 2 : 20}>
               <Grid.Col span={isMobile ? 2 : 4}></Grid.Col>
               <Grid.Col span={isMobile ? 2 : 10}>
