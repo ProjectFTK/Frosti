@@ -8,37 +8,61 @@ export default function Content() {
       <Body
         isStart={false}
         line={true}
-        imgSrc='/imgs/student.png'
-        title='Reduced Fatigue'
+        imgSrc='/imgs/versions.png'
+        title='Natural Language'
         content=
         {
           <p>
-            Frosti collects your updates async, and creates a high level rundown so everyone stays up to date without the hassle of standups.
+            Quickly describe your goals or updates in plain English, and Frosti will convert these into the appropriate task action.
           </p>
         }
       />
       <Body
         isStart={true}
         line={true}
-        imgSrc='/imgs/blonde.png'
-        title='More Honesty'
+        imgSrc='/imgs/lightning.png'
+        title=' Instant Overview'
         content=
         {
           <p>
-            Sometimes, team members might not feel comfortable voicing certain issues. With Frosti, they can report issues in a less pressurized environment.
+            Ask Frosti for a quick snapshot of a project, milestone, or task. Instantly know  what's done, what's on track, amd what's at risk.
           </p>
         }
       />
       <Body
         isStart={false}
         line={true}
-        imgSrc='/imgs/versions.png'
+        imgSrc='/imgs/blonde.png'
+        title='Personalized Insights'
+        content=
+        {
+          <p>
+            Frosti learns from your individual and team habits. See how you're spending your time, where the bottlenecks are, and how to optimize it.
+          </p>
+        }
+      />
+      <Body
+        isStart={true}
+        line={true}
+        imgSrc='/imgs/confidential.png'
+        title='Confidential'
+        content=
+        {
+          <p>
+            Frosti is run Microsoft Azure's OpenAI, so your data is proected by enterprise grade security.
+          </p>
+        }
+      />
+      <Body
+        isStart={false}
+        line={true}
+        imgSrc='/imgs/build.png'
         title='Intelligent'
         soon
         content=
         {
           <p>
-            Frosti can auto update tasks and follow up on blockers, ensuring that progress continues smoothly without needing to chase people for updates.
+            Frosti can follow up on blockers, ensuring that progress continues smoothly without needing to chase people for updates.
           </p>
         }
       />
@@ -51,20 +75,7 @@ export default function Content() {
         content=
         {
           <p>
-            If Frosti fits your team's needs, we’re happy to integrate with platforms like Teams, Slack, and more for seamless collaboration.
-          </p>
-        }
-      />
-      <Body
-        isStart={false}
-        line={true}
-        imgSrc='/imgs/educators.png'
-        title='Data-Driven'
-        soon
-        content=
-        {
-          <p>
-            Frosti learns over time, providing insights into completion, recurring blockers, and other patterns. This can be valuable for optimizing workflows.
+            Chat with Frosti right from Teams, Slack and more.
           </p>
         }
       />

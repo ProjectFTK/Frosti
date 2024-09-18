@@ -14,17 +14,17 @@ export default function Panels() {
         content: (
           <>
             <p>
-            Frosti is an AI standup assistant that lets you skip daily status meetings and update your team asynchronously. You can share what you’re working on without interrupting your workflow, and Frosti will take care of summarizing and syncing with the rest of your team.
+              Frosti is an AI-powered project management tool designed to simplify how you and your team organize, track, and complete tasks. With real-time automated project updates, Frosti takes the manual work out of managing projects. It's built to help individuals stay on top of their work and teams stay in sync, making collaboration seamless and efficient.
             </p>
           </>
         ),
       },
       {
-        title: "Why should I use Frosti?",
+        title: "Why should my team use Frosti?",
         content:
           (
             <p>
-              If you dread daily standups or find them disruptive, Frosti is for you. It allows you to update your team on your own time, keeps your tasks and progress in check, and reduces unnecessary meetings. Whether you’re working remotely, across time zones, or just hate status meetings, Frosti helps you stay productive without the meeting fatigue.
+              Your team should use Frosti because it saves time and reduces the complexity of managing projects. Frosti automates task assignment, tracks progress, and provides AI-generated insights that highlight bottlenecks and risks before they become issues. By getting instant project overviews and personalized recommendations, your team can focus more on completing work and less on organizing it.
             </p>
           ),
       },
