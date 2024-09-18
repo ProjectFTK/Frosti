@@ -25,7 +25,7 @@ export default function Content() {
         content=
         {
           <p>
-            Ask Frosti for a quick snapshot of a project, milestone, or task. Instantly know  what's done, what's on track, amd what's at risk.
+            Ask Frosti for a quick snapshot of a project, milestone, or task. Instantly know  what's done, what's on track, and what's at risk.
           </p>
         }
       />
@@ -49,7 +49,7 @@ export default function Content() {
         content=
         {
           <p>
-            Frosti is run Microsoft Azure's OpenAI, so your data is proected by enterprise grade security.
+            Frosti is run on Microsoft Azure's OpenAI, so your data is proected by enterprise grade security.
           </p>
         }
       />
