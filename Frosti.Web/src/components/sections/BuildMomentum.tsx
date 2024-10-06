@@ -1,6 +1,6 @@
 'use client';
 
-import CyclesImg from '@assets/images/cycles.webp';
+import CyclesImg from '@assets/images/Requests.png';
 import { Features } from '@components/Features';
 
 import {
@@ -14,7 +14,7 @@ import {
 
 export const BuildMomentum = () => {
   return (
-    <Features color="205,92,0" colorDark="139,69,19">
+    <Features color="40,87,255" colorDark="48,58,117">
       <Features.Main
         title={
           <>
@@ -24,7 +24,7 @@ export const BuildMomentum = () => {
           </>
         }
         image={CyclesImg}
-        imgSize="large"
+        imgSize="small"
         text="Cycles focus your team on what work should happen next. A healthy routine to maintain velocity and make meaningful progress."
       />
       <Features.Grid

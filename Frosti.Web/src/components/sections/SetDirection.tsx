@@ -1,7 +1,7 @@
 'use client';
 
 import CardRoadmapsImg from '@assets/images/card-roadmaps.webp';
-import CardUpdatesImg from '@assets/images/card-updates.webp';
+import CardUpdatesImg from '@assets/images/Requests.png';
 import RoadmapImg from '@assets/images/roadmap.webp';
 import { Features } from '@components/Features';
 
@@ -16,7 +16,7 @@ import {
 
 export const SetDirection = () => {
   return (
-    <Features color="178,34,34" colorDark="128,0,0">
+    <Features color="0,128,128" colorDark="0,77,77">
       <Features.Main
         title={
           <>

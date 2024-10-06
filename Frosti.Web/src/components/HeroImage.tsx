@@ -1,6 +1,6 @@
 'use client';
 
-import HeroImg from '@assets/images/hero.png';
+import HeroImg from '@assets/images/Hero.png';
 import clsx from 'clsx';
 import Image from 'next/image';
 import type { CSSProperties } from 'react';
@@ -102,7 +102,7 @@ export const HeroImage = () => {
         <Image
           src={HeroImg}
           alt="Hero image"
-          width={1277}
+          width={1147}
           className={clsx(
             'relative z-10 transition-opacity delay-[600ms]',
             inView ? 'opacity-100' : 'opacity-0'

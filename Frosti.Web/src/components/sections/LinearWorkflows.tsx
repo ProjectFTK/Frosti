@@ -13,7 +13,7 @@ import {
 
 export const LinearWorkflows = () => {
   return (
-    <Features color="0,128,128" colorDark="0,77,77">
+    <Features color="62,36,118" colorDark="62,36,118">
       <Features.Main
         title={
           <>

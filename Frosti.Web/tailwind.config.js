@@ -22,20 +22,20 @@ module.exports = {
       'glass-gradient':
         'linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.05) 100%)',
       'glow-lines':
-        'linear-gradient(var(--direction), #f7e45a 0.43%, #f3d500 14.11%, rgba(243, 213, 0, 0) 62.95%)',
+        'linear-gradient(var(--direction), #9d9bf2 0.43%, #7877c6 14.11%, rgba(120, 119, 198, 0) 62.95%)',
       'hero-glow':
-        'conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(255, 207, 0) 0deg, rgb(255, 235, 0) 67.5deg, rgb(255, 193, 7) 198.75deg, rgb(247, 202, 24) 251.25deg, rgb(253, 253, 150) 301.88deg, rgb(255, 229, 51) 360deg)',
+        'conic-gradient(from 230.29deg at 51.63% 52.16%, rgb(36, 0, 255) 0deg, rgb(0, 135, 255) 67.5deg, rgb(108, 39, 157) 198.75deg, rgb(24, 38, 163) 251.25deg, rgb(54, 103, 196) 301.88deg, rgb(105, 30, 255) 360deg)',
       'hero-gradient':
-        'radial-gradient(ellipse 50% 80% at 20% 40%, rgba(0, 241, 118, 0.1), transparent), radial-gradient(ellipse 50% 80% at 80% 50%, rgba(255, 223, 0, 0.15), transparent)',
+        'radial-gradient(ellipse 50% 80% at 20% 40%, rgba(93, 52, 221, 0.1), transparent), radial-gradient(ellipse 50% 80% at 80% 50%, rgba(120, 119, 198, 0.15),transparent)',
       'page-gradient':
-        'radial-gradient(ellipse 80% 50% at 50% -20%,rgba(0, 80, 59, 0.3), transparent)',
+        'radial-gradient(ellipse 80% 50% at 50% -20%,rgba(120, 119, 198, 0.3), transparent)',
       'primary-gradient':
-        'linear-gradient(92.88deg, rgb(255, 196, 0) 9.16%, rgb(255, 193, 7) 43.89%, rgb(255, 179, 0) 64.72%)',
+        'linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%)',
       'radial-faded':
         'radial-gradient(circle at bottom center, var(--color), transparent 70%)',
     },
     boxShadow: {
-      primary: 'rgb(255 235 59 / 50%) 0px 1px 40px',
+      primary: 'rgb(80 63 205 / 50%) 0px 1px 40px',
     },
     colors: {
       black: '#000212',

@@ -66,8 +66,8 @@ const FeatureMain = ({
             {title}
           </h2>
           {image && (
-            <div className="relative rounded-[14px] before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(rgba(255,255,255,0.3),rgba(255,255,255,0)120%)] before:p-[1px] before:[mask:linear-gradient(black,black)content-box_content-box,linear-gradient(black,black)] before:[mask-composite:xor] after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:bg-[rgba(255,255,255,0.15)] after:[mask:linear-gradient(black,transparent)]">
-              <Image src={image} alt="issues" className="h-auto w-full" />
+            <div className="relative before:pointer-events-none rounded-[14px] before:absolute before:inset-0 before:rounded-[inherit] before:p-[1px] after:pointer-events-none after:absolute after:inset-0 after:rounded-[inherit] after:bg-[rgba(255,255,255,0.05)] after:[mask:linear-gradient(black,transparent)]">
+              <Image src={image} alt="issues" className="rounded-[14px] h-auto w-full" />
             </div>
           )}
         </Container>
