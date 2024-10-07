@@ -1,6 +1,6 @@
 'use client';
 
-import CyclesImg from '@assets/images/Requests.png';
+import CyclesImg from '@assets/images/seekers.png';
 import { Features } from '@components/Features';
 
 import {
@@ -18,14 +18,14 @@ export const BuildMomentum = () => {
       <Features.Main
         title={
           <>
-            Build momentum
+            Thoughtful matches,
             <br />
-            with Cycles
+            real opportunities
           </>
         }
         image={CyclesImg}
         imgSize="small"
-        text="Cycles focus your team on what work should happen next. A healthy routine to maintain velocity and make meaningful progress."
+        text="This isn't a job board-this is where thoughtful connections are made, where every role is a chance to grow, and where you can be more than just a résumé."
       />
       <Features.Grid
         features={[

@@ -2,7 +2,7 @@
 
 import CardRoadmapsImg from '@assets/images/card-roadmaps.webp';
 import CardUpdatesImg from '@assets/images/Requests.png';
-import RoadmapImg from '@assets/images/roadmap.webp';
+import RoadmapImg from '@assets/images/finder.png';
 import { Features } from '@components/Features';
 
 import {
@@ -16,18 +16,18 @@ import {
 
 export const SetDirection = () => {
   return (
-    <Features color="0,128,128" colorDark="0,77,77">
+    <Features color="62,36,118" colorDark="62,36,118">
       <Features.Main
         title={
           <>
-            Set direction
+            A smarter
             <br />
-            with Roadmaps
+            way to hire
           </>
         }
         image={RoadmapImg}
         imgSize="large"
-        text="Plan visually, collaborate in cross-team projects, and make better decisions with progress insights and project updates."
+        text="Let's connect you with candidates who are as invested in your mission as you are, allowing you to build a team that’s not just qualified—but committed."
       />
       <Features.Grid
         features={[
@@ -60,22 +60,6 @@ export const SetDirection = () => {
             icon: NotificationsIcon,
             title: 'Personal notifications.',
             text: 'Stay in the loop on project activity and updates.',
-          },
-        ]}
-      />
-      <Features.Cards
-        features={[
-          {
-            image: CardUpdatesImg,
-            imgClassName: 'top-[55%] md:top-[40%] w-full left-[7%]',
-            title: 'Project updates',
-            text: 'Keep everyone up-to-date on the health and progress of projects.',
-          },
-          {
-            image: CardRoadmapsImg,
-            imgClassName: 'top-[55%] md:top-[40%] w-full left-[2%]',
-            title: 'Focus on the big picture',
-            text: 'Explore every company project in one view to easily identify what needs attention.',
           },
         ]}
       />

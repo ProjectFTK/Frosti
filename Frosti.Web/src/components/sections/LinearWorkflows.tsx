@@ -13,21 +13,15 @@ import {
 
 export const LinearWorkflows = () => {
   return (
-    <Features color="62,36,118" colorDark="62,36,118">
+    <Features color="0,128,128" colorDark="0,77,77">
       <Features.Main
         title={
           <>
-            Linear workflows.
-            <br /> Expoential results.
+            Optimizing for
+            <br /> the right fit
           </>
         }
-        text="From customer support integrations to powerful Git automations, Linear streamlines the entire product development process."
-        btnText={
-          <>
-            Discover integrations
-            <ChevronIcon fill="#8A8F98" className="ml-1" />
-          </>
-        }
+        text="When you find the right fit, everyone wins. You’re happy, they’re happy, and the whole team works better together."
       />
       <Features.Grid
         features={[
