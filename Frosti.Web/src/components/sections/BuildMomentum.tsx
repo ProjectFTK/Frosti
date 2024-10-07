@@ -5,12 +5,15 @@ import { Features } from '@components/Features';
 
 import {
   ConfigurableIcon,
-  CreepIcon,
-  DelaysIcon,
-  PreparedIcon,
   ScheduledIcon,
-  TrackingIcon,
 } from '../icons/features/buildMomentum';
+
+import {
+  AutomatedBacklogIcon,
+  CustomViewsIcon,
+  DiscussionIcon,
+  IssuesIcon,
+} from '@components/icons/features/issueTracking';
 
 export const BuildMomentum = () => {
   return (
@@ -25,39 +28,39 @@ export const BuildMomentum = () => {
         }
         image={CyclesImg}
         imgSize="small"
-        text="This isn't a job board-this is where thoughtful connections are made, where every role is a chance to grow, and where you can be more than just a résumé."
+        text="This isn't just another job board—it’s about finding the right fit for both sides."
       />
       <Features.Grid
         features={[
           {
-            icon: TrackingIcon,
-            title: 'Automatic tracking.',
-            text: 'Any started issues are added to the current cycle.',
+            icon: AutomatedBacklogIcon,
+            title: 'Showcase Yourself.',
+            text: 'Highlight career goals, values, work style, and skills.',
+          },
+          {
+            icon: CustomViewsIcon,
+            title: 'Thoughtful Applications.',
+            text: 'Limited to 3 applies a day—use them wisely.',
           },
           {
             icon: ScheduledIcon,
-            title: 'Scheduled.',
-            text: 'Unfinished work rolls over to the next cycle automatically.',
+            title: 'Timely Response.',
+            text: 'Employers must reply within 7 days.',
           },
           {
             icon: ConfigurableIcon,
-            title: 'Fully configurable.',
-            text: 'Define start date, end date, duration, and more.',
+            title: 'Targeted Matches.',
+            text: 'Use filters to align your experience with positions.',
           },
           {
-            icon: DelaysIcon,
-            title: 'Predict delays.',
-            text: 'Get warnings for at-risk cycles.',
+            icon: DiscussionIcon,
+            title: 'Tailored Introductions.',
+            text: 'Send personalized messages when you match with jobs.',
           },
           {
-            icon: CreepIcon,
-            title: 'Scope creep.',
-            text: 'Understand which issues are added mid-cycle.',
-          },
-          {
-            icon: PreparedIcon,
-            title: 'Be prepared.',
-            text: 'Schedule work in advance with upcoming cycles.',
+            icon: IssuesIcon,
+            title: 'Fit First.',
+            text: 'Find jobs that match your values and work style.',
           },
         ]}
       />

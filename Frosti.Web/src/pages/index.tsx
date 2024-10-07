@@ -3,7 +3,6 @@ import { StarsIllustration } from '@components/illustrations/Stars';
 import { AvailableToday } from '@components/sections/AvailableToday';
 import { BuildMomentum } from '@components/sections/BuildMomentum';
 import { Clients } from '@components/sections/Clients';
-import { EnjoyIssueTracking } from '@components/sections/EnjoyIssueTracking';
 import { HomepageHero } from '@components/sections/HomepageHero';
 import { LinearWorkflows } from '@components/sections/LinearWorkflows';
 import { SetDirection } from '@components/sections/SetDirection';
@@ -20,7 +19,6 @@ export default function Homepage() {
       </div>
       <BuildMomentum />
       <SetDirection />
-      <LinearWorkflows />
       <div
         className={clsx(
           'mask-radial-faded pointer-events-none relative z-[-1] my-[-16.4rem] h-[48rem] rotate-180 overflow-hidden md:h-[60rem]',

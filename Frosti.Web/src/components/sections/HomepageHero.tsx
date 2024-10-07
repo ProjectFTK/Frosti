@@ -10,8 +10,8 @@ export const HomepageHero = () => (
       <br className="hidden md:block" />just a resume
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Whether you’re a job seeker or an employer,
-      <br className="hidden md:block" /> let's make the hiring journey personal and meaningful.
+      Join one of our startups or SMBs where you can make
+      <br className="hidden md:block" /> real impact, and influence direction.
     </HeroSubtitle>
     <Button
       href="/"

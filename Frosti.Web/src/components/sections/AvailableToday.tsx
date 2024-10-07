@@ -14,9 +14,9 @@ export const AvailableToday = () => {
           className="h-[12.8rem] w-[12.8rem]"
         />
         <h1 className="text-gradient text-5xl md:text-8xl">
-          Iterate Fast. Iterate Faster.
+          Built for the future.
           <br />
-          Coming soon.
+          Available 11/01.
         </h1>
         <div className="flex gap-[1.6rem]">
           <Button

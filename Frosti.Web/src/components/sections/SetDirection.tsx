@@ -1,12 +1,9 @@
 'use client';
 
-import CardRoadmapsImg from '@assets/images/card-roadmaps.webp';
-import CardUpdatesImg from '@assets/images/Requests.png';
 import RoadmapImg from '@assets/images/finder.png';
 import { Features } from '@components/Features';
 
 import {
-  DocumentsIcon,
   InsightsIcon,
   MultiTeamIcon,
   NotificationsIcon,
@@ -14,52 +11,56 @@ import {
   TimelineIcon,
 } from '../icons/features/setDirection';
 
+import {
+  PreparedIcon,
+} from '../icons/features/buildMomentum';
+
 export const SetDirection = () => {
   return (
     <Features color="62,36,118" colorDark="62,36,118">
       <Features.Main
         title={
           <>
-            A smarter
+            Transform your
             <br />
-            way to hire
+            talent search
           </>
         }
         image={RoadmapImg}
-        imgSize="large"
-        text="Let's connect you with candidates who are as invested in your mission as you are, allowing you to build a team that’s not just qualified—but committed."
+        imgSize="small"
+        text="Let's connect you with candidates who are as invested in your mission as you are."
       />
       <Features.Grid
         features={[
           {
             icon: MultiTeamIcon,
-            title: 'Multi-team projects.',
-            text: 'Collaborate across teams and departments.',
+            title: 'All Access.',
+            text: 'Reach candidates within your geographic preference.',
           },
           {
-            icon: DocumentsIcon,
-            title: 'Project documents.',
-            text: 'Write project briefs and specs directly in Linear.',
+            icon: PreparedIcon,
+            title: 'Daily Requests.',
+            text: 'Engage with up to 3 candidates each day.',
           },
           {
             icon: RoadmapsIcon,
-            title: 'Custom roadmaps.',
-            text: 'Organize projects across multiple roadmaps.',
+            title: 'Culture Alignment.',
+            text: 'Ensure a cultural fit from the first interaction.',
           },
           {
             icon: TimelineIcon,
-            title: 'Timeline view.',
-            text: 'Visualize the product journey ahead.',
+            title: 'Excite Candidates.',
+            text: 'Send personalized messages to spark genuine interest.',
           },
           {
             icon: InsightsIcon,
-            title: 'Project insights.',
-            text: 'Track scope, velocity, and progress over time.',
+            title: 'Quality Candidates.',
+            text: 'Engage with pre-filtered candidates who meet your criteria.',
           },
           {
             icon: NotificationsIcon,
-            title: 'Personal notifications.',
-            text: 'Stay in the loop on project activity and updates.',
+            title: 'Free Early Access.',
+            text: 'Enjoy free access as an early user.',
           },
         ]}
       />
