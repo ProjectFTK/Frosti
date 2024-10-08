@@ -59,8 +59,8 @@ export const SetDirection = () => {
           },
           {
             icon: NotificationsIcon,
-            title: 'Free Early Access.',
-            text: 'Enjoy free access as an early user.',
+            title: 'Pay-Per-Hire.',
+            text: 'Only pay when you successfully fill the role.',
           },
         ]}
       />

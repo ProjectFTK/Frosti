@@ -20,7 +20,7 @@ export const AvailableToday = () => {
         </h1>
         <div className="flex gap-[1.6rem]">
           <Button
-            href="/beta"
+            href="/wall"
             intent="primary"
             size="lg"
             className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"

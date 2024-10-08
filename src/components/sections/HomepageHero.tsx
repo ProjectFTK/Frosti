@@ -10,11 +10,11 @@ export const HomepageHero = () => (
       <br className="hidden md:block" />just a resume
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Join one of our startups or SMBs where you can make
-      <br className="hidden md:block" /> real impact, and influence direction.
+      Join one of our startups or SMBs in order to
+      <br className="hidden md:block" /> learn quickly and make real impact.
     </HeroSubtitle>
     <Button
-      href="/"
+      href="/wall"
       intent="primary"
       size="lg"
       className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
