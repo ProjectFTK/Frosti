@@ -7,7 +7,7 @@ export const HomepageHero = () => (
   <Hero>
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
       You're way more than
-      <br className="hidden md:block" />just a resume
+      <br className="hidden md:block" /> just a resume
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
       Join one of our startups or SMBs in order to
