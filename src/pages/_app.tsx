@@ -5,7 +5,6 @@ import '@styles/globals.css';
 import '@styles/Chat.css';
 import { Header } from '@components/Header';
 import { Footer } from '@components/Footer';
-import { UserProvider } from '../providers/UserContext';
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -25,13 +24,11 @@ export default function App(props: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
 
-      <UserProvider>
-        <Header />
-        <main className="bg-page-gradient pt-nav-height">
-          {isClient && <Component {...pageProps} />}
-        </main>
-        <Footer />
-      </UserProvider>
+      <Header />
+      <main className="bg-page-gradient pt-nav-height">
+        {isClient && <Component {...pageProps} />}
+      </main>
+      <Footer />
     </>
   );
 }

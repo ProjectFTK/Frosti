@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 import Form from "@components/Wall/Form";
 import WallApi from "../apis/wall";
 import { ICompany, IProspect } from "../types/wall";
+import WallForm from "@components/Wall/Form";
 export default function Beta() {
 
     const [showModal, setShowModal] = useState(false);
@@ -42,13 +43,10 @@ export default function Beta() {
                 </div>
 
                 <p className={clsx('mt-2 mb-12 text-lg text-gray-300 md:text-xl mx-9')}>
-                    Get ahead of the crowd. Join The Wall to boost your profile’s presence and match potential when we launch.
+                    Join The Wall to boost your profile’s presence and match potential when we launch. Spread the word – the more people that join, the more companies will follow.
                 </p>
-                <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
-                    {
-                        prospects && companies &&
+                <div style={{ minHeight: '50vh', maxHeight: '51vh', overflowY: 'auto' }} className='mx-9'>
                         <Wall prospects={prospects} companies={companies} />
-                    }
                 </div>
             </div>
 
@@ -75,7 +73,7 @@ export default function Beta() {
                                     </button>
                                 </div>
                                 {/*body*/}
-                                <Form />
+                                <WallForm companies={companies} prospects={prospects} setCompanies={setCompanies} setProspects={setProspects} setShowModal={setShowModal} />
                                 {/*footer*/}
 
                             </div>

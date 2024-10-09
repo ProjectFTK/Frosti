@@ -2,11 +2,11 @@ import http from '../http';
 import { IProspect, ICompany, WallProps } from '../types/wall';
 
 const addProspectAsync = (prospect: IProspect) => {
-    return http.post(`wall/addProspectAsync`, prospect);
+    return http.post(`wall/AddProspect`, prospect);
 };
 
 const addCompanyAsync = (company: ICompany) => {
-    return http.post(`wall/addCompanyAsync`, company);
+    return http.post(`wall/AddCompany`, company);
 };
 
 const getTheWall = () => {

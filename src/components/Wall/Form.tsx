@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction, useState } from 'react';
 import { Button, Highlight } from '@components/Button';
+import { IProspect, ICompany } from '../../types/wall';
+import WallApi from '../../apis/wall';
 
-interface FormData {
+interface WallFormData {
     name?: string;
-    funkyName?: string;
     email: string;
-    companyName?: string;
     location?: string;
 }
 
-const Form = () => {
+interface WallFormProps {
+    prospects: IProspect[] | undefined;
+    companies: ICompany[] | undefined;
+    setProspects: Dispatch<SetStateAction<IProspect[] | undefined>>;
+    setCompanies: Dispatch<SetStateAction<ICompany[] | undefined>>;
+    setShowModal: Dispatch<SetStateAction<boolean>>;
+}
+
+const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects, setCompanies, setShowModal }) => {
     const [selectedOption, setSelectedOption] = useState<'prospect' | 'employer' | ''>('');
-    const [formData, setFormData] = useState<FormData>({ email: '' });
+    const [formData, setFormData] = useState<WallFormData>({ email: '' });
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
     const handleOptionChange = (option: 'prospect' | 'employer') => {
@@ -33,10 +41,9 @@ const Form = () => {
 
         if (selectedOption === 'prospect') {
             if (!formData.name) newErrors.name = 'Name is required';
-            if (!formData.funkyName) newErrors.funkyName = 'Funky Name is required';
             if (!formData.email) newErrors.email = 'Email is required';
         } else if (selectedOption === 'employer') {
-            if (!formData.companyName) newErrors.companyName = 'Company Name is required';
+            if (!formData.name) newErrors.name = 'Name is required';
             if (!formData.location) newErrors.location = 'Location is required';
             if (!formData.email) newErrors.email = 'Email is required';
         }
@@ -49,15 +56,57 @@ const Form = () => {
         e.preventDefault();
         if (validateForm()) {
             // Handle form submission or API call with formData
-            console.log('Form submitted successfully', formData);
+            //console.log(`Form submitted successfully for ${formData.name}`, formData);
+            if (selectedOption == "prospect" && formData.name) {
+                WallApi.addProspectAsync(formData as IProspect)
+                    .then((response) => {
+                        formData.name && prospects ? setProspects(
+                            [...prospects, {
+                                name: formData.name,
+                            }]
+                        )
+                            :
+                            formData.name && setProspects(
+                                [{
+                                    name: formData.name,
+                                }]
+                            )
+                        setShowModal(false)
+                    })
+                    .catch(() => {
+                        alert('Something went wrong. Please try again or contact founders@projectftk.com');
+                    });
+            }
+            else {
+                WallApi.addCompanyAsync(formData as ICompany)
+                    .then((response) => {
+                        formData.name && formData.location && companies ? setCompanies(
+                            [...companies, {
+                                name: formData.name,
+                                location: formData.location
+                            }]
+                        )
+                            :
+                            formData.name && formData.location && setCompanies(
+                                [{
+                                    name: formData.name,
+                                    location: formData.location
+                                }]
+                            )
+                        setShowModal(false)
+                    })
+                    .catch(() => {
+                        alert('Something went wrong. Please try again or contact founders@projectftk.com');
+                    });;
+            }
         } else {
-            console.log('Validation failed');
+            alert('Form validation failed');
         }
     };
 
     return (
         <div className="p-6 text-md flex items-center justify-center">
-            <form className="p-8 rounded-lg shadow-md w-full max-w-lg" onSubmit={handleSubmit}>
+            <form className="py-8 rounded-lg shadow-md w-full max-w-lg" onSubmit={handleSubmit}>
                 {!selectedOption && <h2 className="text-xl font-bold mb-4">Select one:</h2>}
                 <div className="flex space-x-4 mb-4">
                     <label
@@ -99,30 +148,17 @@ const Form = () => {
                 {selectedOption === 'prospect' && (
                     <div className="space-y-4 mt-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                         <div>
-                            <label className="">Name</label>
+                            <label className="">Pseudo-name</label>
                             <input
                                 type="text"
                                 name="name"
                                 value={formData.name || ''}
                                 onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md`}
-                                placeholder="Enter your name"
+                                className={`mt-1 p-2 block w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
+                                placeholder="Name that shows up on The Wall"
                                 required
                             />
                             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
-                        </div>
-                        <div>
-                            <label className="">Pseudo-name</label>
-                            <input
-                                type="text"
-                                name="funkyName"
-                                value={formData.funkyName || ''}
-                                onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.funkyName ? 'border-red-500' : 'border-gray-300'} rounded-md`}
-                                placeholder="Enter your funky name"
-                                required
-                            />
-                            {errors.funkyName && <p className="text-red-500 text-sm">{errors.funkyName}</p>}
                         </div>
                         <div>
                             <label className="">Email</label>
@@ -131,8 +167,8 @@ const Form = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md`}
-                                placeholder="Enter your email"
+                                className={`mt-1 p-2 block w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
+                                placeholder="Used to hold your place for launch"
                                 required
                             />
                             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -147,14 +183,14 @@ const Form = () => {
                             <label className="">Company Name</label>
                             <input
                                 type="text"
-                                name="companyName"
-                                value={formData.companyName || ''}
+                                name="name"
+                                value={formData.name || ''}
                                 onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.companyName ? 'border-red-500' : 'border-gray-300'} rounded-md`}
-                                placeholder="Enter company name"
+                                className={`mt-1 p-2 block w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
+                                placeholder="Your company's name"
                                 required
                             />
-                            {errors.companyName && <p className="text-red-500 text-sm">{errors.companyName}</p>}
+                            {errors.companyName && <p className="text-red-500 text-sm">{errors.name}</p>}
                         </div>
                         <div>
                             <label className="">Location</label>
@@ -163,8 +199,8 @@ const Form = () => {
                                 name="location"
                                 value={formData.location || ''}
                                 onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.location ? 'border-red-500' : 'border-gray-300'} rounded-md`}
-                                placeholder="Enter location"
+                                className={`mt-1 p-2 block w-full border ${errors.location ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
+                                placeholder="NYC, Remote etc."
                                 required
                             />
                             {errors.location && <p className="text-red-500 text-sm">{errors.location}</p>}
@@ -176,8 +212,8 @@ const Form = () => {
                                 name="email"
                                 value={formData.email}
                                 onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md`}
-                                placeholder="Enter company email"
+                                className={`mt-1 p-2 block w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
+                                placeholder="Used to hold your place for launch"
                                 required
                             />
                             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
@@ -191,7 +227,7 @@ const Form = () => {
 
                         <Button
                             intent="primary"
-                            onClick={() => console.log('deez')}
+                            onClick={handleSubmit}
                             size="lg"
                             className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
                         >
@@ -204,4 +240,4 @@ const Form = () => {
     );
 };
 
-export default Form;
+export default WallForm;
