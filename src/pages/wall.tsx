@@ -2,27 +2,30 @@ import Wall from "@components/Wall/Wall";
 import clsx from "clsx";
 import { Button, Highlight } from '@components/Button';
 import { Center } from '@components/Center';
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Form from "@components/Wall/Form";
+import WallApi from "../apis/wall";
+import { ICompany, IProspect } from "../types/wall";
 export default function Beta() {
 
-    const sampleProspects = [
-        { id: 1, name: 'Alice Johnson', username: 'alicej' },
-        { id: 2, name: 'Bob Smith', username: 'bob_smith' },
-        { id: 3, name: 'Carol White', username: 'carolw' },
-    ];
-
-    const sampleCompanies = [
-        { id: 1, logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/2048px-Microsoft_logo.svg.png', name: 'Tech Corp', location: 'San Francisco, CA' },
-        { id: 2, logo: 'https://banner2.cleanpng.com/20190731/uqk/kisspng-google-icon-1713874997698.webp', name: 'InnovateX', location: 'New York, NY' },
-        { id: 3, logo: 'https://www.logo.wine/a/logo/SpaceX/SpaceX-White-Dark-Background-Logo.wine.svg', name: 'Dev Labs', location: 'Austin, TX' },
-    ];
-
     const [showModal, setShowModal] = useState(false);
+    const [prospects, setProspects] = useState<IProspect[]>();
+    const [companies, setCompanies] = useState<ICompany[]>();
+
+    useMemo(() => {
+        WallApi.getTheWall()
+            .then((response) => {
+                setProspects(response.data.prospects)
+                setCompanies(response.data.companies)
+            })
+            .catch((e: Error) => {
+                console.log(e);
+                window.location.href = '/404'
+            })
+    }, []);
 
     return (
         <>
-
             <div className="container mx-auto p-8">
                 <div className="flex mt-4 items-end mx-9">
                     <h1 className={clsx('text-gradient text-6xl md:text-8xl')}>
@@ -41,8 +44,12 @@ export default function Beta() {
                 <p className={clsx('mt-2 mb-12 text-lg text-gray-300 md:text-xl mx-9')}>
                     Get ahead of the crowd. Join The Wall to boost your profile’s presence and match potential when we launch.
                 </p>
-
-                <Wall prospects={sampleProspects} companies={sampleCompanies} />
+                <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+                    {
+                        prospects && companies &&
+                        <Wall prospects={prospects} companies={companies} />
+                    }
+                </div>
             </div>
 
             {showModal ? (

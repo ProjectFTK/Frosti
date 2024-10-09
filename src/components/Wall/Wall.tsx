@@ -1,19 +1,5 @@
 import React from 'react';
-
-type Prospect = {
-    username: string;
-};
-
-type Company = {
-    logo: string;
-    name: string;
-    location: string;
-};
-
-type WallProps = {
-    prospects: Prospect[];
-    companies: Company[];
-};
+import { WallProps } from '../../types/wall';
 
 const Wall: React.FC<WallProps> = ({ prospects, companies }) => {
     const maxLength = Math.max(prospects.length, companies.length); // To ensure equal rows
@@ -37,7 +23,7 @@ const Wall: React.FC<WallProps> = ({ prospects, companies }) => {
                             <div className="flex items-center">
                                 <span className="text-lg leading-tight text-white">{index + 1}.</span>
                                 <p className="ml-4 text-lg leading-tight text-white ">
-                                    {prospects[index].username}
+                                    {prospects[index].name}
                                 </p>
                             </div>
                         ) : (

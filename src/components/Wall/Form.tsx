@@ -10,11 +10,11 @@ interface FormData {
 }
 
 const Form = () => {
-    const [selectedOption, setSelectedOption] = useState<'seekingJob' | 'employer' | ''>('');
+    const [selectedOption, setSelectedOption] = useState<'prospect' | 'employer' | ''>('');
     const [formData, setFormData] = useState<FormData>({ email: '' });
     const [errors, setErrors] = useState<{ [key: string]: string }>({});
 
-    const handleOptionChange = (option: 'seekingJob' | 'employer') => {
+    const handleOptionChange = (option: 'prospect' | 'employer') => {
         setSelectedOption(option);
         setFormData({ email: '' }); // Reset form data when switching options
         setErrors({});
@@ -31,7 +31,7 @@ const Form = () => {
     const validateForm = () => {
         let newErrors: { [key: string]: string } = {};
 
-        if (selectedOption === 'seekingJob') {
+        if (selectedOption === 'prospect') {
             if (!formData.name) newErrors.name = 'Name is required';
             if (!formData.funkyName) newErrors.funkyName = 'Funky Name is required';
             if (!formData.email) newErrors.email = 'Email is required';
@@ -61,7 +61,7 @@ const Form = () => {
                 {!selectedOption && <h2 className="text-xl font-bold mb-4">Select one:</h2>}
                 <div className="flex space-x-4 mb-4">
                     <label
-                        className={`flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition duration-300 ${selectedOption === 'seekingJob'
+                        className={`flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition duration-300 ${selectedOption === 'prospect'
                             ? 'border-purple-600 '
                             : 'border-gray-300 hover:border-purple-300'
                             }`}
@@ -69,9 +69,9 @@ const Form = () => {
                         <input
                             type="radio"
                             name="option"
-                            value="seekingJob"
-                            checked={selectedOption === 'seekingJob'}
-                            onChange={() => handleOptionChange('seekingJob')}
+                            value="prospect"
+                            checked={selectedOption === 'prospect'}
+                            onChange={() => handleOptionChange('prospect')}
                             className="hidden"
                         />
                         <span className="text-lg font-medium">Prospect</span>
@@ -96,7 +96,7 @@ const Form = () => {
                 </div>
 
                 {/* Seeking Job Fields */}
-                {selectedOption === 'seekingJob' && (
+                {selectedOption === 'prospect' && (
                     <div className="space-y-4 mt-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                         <div>
                             <label className="">Name</label>
@@ -112,7 +112,7 @@ const Form = () => {
                             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
                         </div>
                         <div>
-                            <label className="">Funky Name</label>
+                            <label className="">Pseudo-name</label>
                             <input
                                 type="text"
                                 name="funkyName"
