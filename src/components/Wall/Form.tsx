@@ -108,7 +108,7 @@ const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects,
         <div className="p-6 text-md flex items-center justify-center">
             <form className="py-8 rounded-lg shadow-md w-full max-w-lg" onSubmit={handleSubmit}>
                 {!selectedOption && <h2 className="text-xl font-bold mb-4">Select one:</h2>}
-                <div className="flex space-x-4 mb-4">
+                <div className="flex space-x-4 mb-4n">
                     <label
                         className={`flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition duration-300 ${selectedOption === 'prospect'
                             ? 'border-purple-600 '
@@ -178,7 +178,7 @@ const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects,
 
                 {/* Employer Fields */}
                 {selectedOption === 'employer' && (
-                    <div className="space-y-4 text-md translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
+                    <div className="space-y-4 mt-4 text-md translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                         <div>
                             <label className="">Company Name</label>
                             <input

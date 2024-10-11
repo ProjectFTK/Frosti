@@ -6,53 +6,54 @@ const Wall: React.FC<WallProps> = ({ prospects, companies }) => {
 
     return (
         <div>
-            <div className="grid grid-cols-2 gap-4 ">
-                {/* Column Headers */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+
+                {/* Employers Section */}
                 <div>
-                    <h2 className="text-2xl font-semibold">Prospects</h2>
+                    <h2 className="text-2xl font-semibold mb-2">Employers</h2>
+                    <div className="space-y-4">
+                        {companies && Array.from({ length: maxLength }).map((_, index) => (
+                            <div key={index} className="flex items-center">
+                                {companies[index] ? (
+                                    <>
+                                        <span className="text-lg leading-tight text-white">{index + 1}.</span>
+                                        <div className="ml-4 flex flex-col">
+                                            <p className="text-lg leading-tight text-white">
+                                                {companies[index].name}
+                                                <span className="ml-2 text-sm" style={{ color: 'gray' }}>{companies[index].location}</span>
+                                            </p>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <span className="text-gray-400 hidden sm:inline"></span>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
+
+                {/* Prospects Section */}
                 <div>
-                    <h2 className="text-2xl font-semibold">Employers</h2>
+                    <h2 className="text-2xl font-semibold mb-2">Prospects</h2>
+                    <div className="space-y-4">
+                        {prospects && Array.from({ length: maxLength }).map((_, index) => (
+                            <div key={index} className="flex items-center">
+                                {prospects[index] ? (
+                                    <>
+                                        <span className="text-lg leading-tight text-white">{index + 1}.</span>
+                                        <p className="ml-4 text-lg leading-tight text-white ">
+                                            {prospects[index].name}
+                                        </p>
+                                    </>
+                                ) : (
+                                    <span className="text-gray-400"></span>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                {/* List Items */}
-                {prospects && companies && Array.from({ length: maxLength }).map((_, index) => (
-
-                    <React.Fragment key={index}>
-                        {/* Prospects Section */}
-                        {prospects[index] ? (
-                            <div className="flex items-center">
-                                <span className="text-lg leading-tight text-white">{index + 1}.</span>
-                                <p className="ml-4 text-lg leading-tight text-white ">
-                                    {prospects[index].name}
-                                </p>
-                            </div>
-                        ) : (
-                            <div className="">
-                                <span className="text-gray-400"></span>
-                            </div>
-                        )}
-
-                        {/* Companies Section */}
-                        {companies[index] ? (
-                            <div className=" flex items-center">
-                                <span className="text-lg leading-tight text-white">{index + 1}.</span>
-
-                                <div className="ml-4 flex flex-col">
-                                    <p className="text-lg leading-tight text-white">
-                                        {companies[index].name}
-                                        <span className="ml-2 text-sm" style={{ color: 'gray' }}>{companies[index].location}</span>
-                                    </p>
-
-                                </div>
-                            </div>
-                        ) : (
-                            <div className="">
-                                <span className="text-gray-400"></span>
-                            </div>
-                        )}
-                    </React.Fragment>
-                ))}
             </div>
+
         </div>
     );
 };

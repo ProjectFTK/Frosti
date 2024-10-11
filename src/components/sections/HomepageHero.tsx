@@ -16,7 +16,7 @@ export const HomepageHero = () => (
     <Button
       href="/wall"
       intent="primary"
-      size="lg"
+      size ="lg"
       className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
     >
       Join the Wall
