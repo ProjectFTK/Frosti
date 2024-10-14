@@ -53,7 +53,7 @@ export default function Beta({
                 <p className={clsx('mt-2 mb-12 text-lg text-gray-300 md:text-xl mx-9')}>
                     Join The Wall to boost your profile’s presence and match potential when we launch. Spread the word – the more people that join, the more companies will follow.
                 </p>
-                <div style={{ minHeight: '50vh', maxHeight: '51vh'}} className='mx-9'>
+                <div style={{ minHeight: '50vh'}} className='mx-9'>
                     <Wall prospects={prospects} companies={companies} />
                 </div>
             </div>
