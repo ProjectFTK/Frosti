@@ -34,7 +34,7 @@ const Wall: React.FC<WallProps> = ({ prospects, companies }) => {
 
                 {/* Prospects Section */}
                 <div>
-                    <h2 className="text-2xl font-semibold mb-2">Prospects</h2>
+                    <h2 className="text-2xl font-semibold mb-2">Job Seekers</h2>
                     <div className="space-y-4">
                         {prospects && Array.from({ length: maxLength }).map((_, index) => (
                             <div key={index} className="flex items-center">
