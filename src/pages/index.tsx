@@ -17,8 +17,8 @@ export default function Homepage() {
           <HomepageHero />
         </Container>
       </div>
-      <BuildMomentum />
       <SetDirection />
+      <BuildMomentum />
       <div
         className={clsx(
           'mask-radial-faded pointer-events-none relative z-[-1] my-[-16.4rem] h-[48rem] rotate-180 overflow-hidden md:h-[60rem]',

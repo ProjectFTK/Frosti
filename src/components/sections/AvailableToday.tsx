@@ -16,7 +16,7 @@ export const AvailableToday = () => {
         <h1 className="text-gradient text-5xl md:text-8xl">
           Built for the future.
           <br />
-          Available 11/01.
+          Coming soon.
         </h1>
         <div className="flex gap-[1.6rem]">
           <Button

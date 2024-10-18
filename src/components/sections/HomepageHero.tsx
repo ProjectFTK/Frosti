@@ -6,12 +6,12 @@ import { ChevronIcon } from '@components/icons/chevron';
 export const HomepageHero = () => (
   <Hero>
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      You're way more than
-      <br className="hidden md:block" /> just a resume
+      No spam, no AI, no ghost jobs,
+      <br className="hidden md:block" /> connect with intention.
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Connecting driven individuals with Startups/SMBs
-      <br className="hidden md:block" /> who are ready to make a real impact.
+      Welcome to the online career fair, find the
+      <br className="hidden md:block" /> the right company or right candidate.
     </HeroSubtitle>
     <Button
       href="/wall"

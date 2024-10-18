@@ -17,7 +17,7 @@ import {
 
 export const BuildMomentum = () => {
   return (
-    <Features color="40,87,255" colorDark="48,58,117">
+    <Features color="62,36,118" colorDark="62,36,118">
       <Features.Main
         title={
           <>

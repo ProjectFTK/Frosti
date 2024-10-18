@@ -51,7 +51,7 @@ export default function Beta({
                     </Button>
                 </div>
 
-                <p className={clsx('mt-2 mb-12 text-lg text-gray-300 md:text-xl mx-9')}>
+                <p className={clsx('mt-2 mb-12 text-lg text-gray-300 md:text-xl')}>
                     Join The Wall to boost your profile’s presence and match potential when we launch. Spread the word – the more people that join, the more companies will follow.
                 </p>
                 <div style={{ minHeight: '50vh' }}>

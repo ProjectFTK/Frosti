@@ -1,6 +1,6 @@
 'use client';
 
-import HeroImg from '@assets/images/Hero_img.png';
+import HeroImg from '@assets/images/hero_v2.png';
 import clsx from 'clsx';
 import Image from 'next/image';
 import type { CSSProperties } from 'react';

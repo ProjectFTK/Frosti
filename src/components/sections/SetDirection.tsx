@@ -17,7 +17,7 @@ import {
 
 export const SetDirection = () => {
   return (
-    <Features color="62,36,118" colorDark="62,36,118">
+    <Features color="40,87,255" colorDark="48,58,117">
       <Features.Main
         title={
           <>
@@ -39,8 +39,8 @@ export const SetDirection = () => {
           },
           {
             icon: PreparedIcon,
-            title: 'Daily Requests.',
-            text: 'Engage with up to 3 candidates each day.',
+            title: 'No Spam.',
+            text: 'Candidates are limited to 3 connects per day, so you don\'t get spammed',
           },
           {
             icon: RoadmapsIcon,
