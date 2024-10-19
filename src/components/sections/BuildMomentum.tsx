@@ -28,7 +28,7 @@ export const BuildMomentum = () => {
         }
         image={CyclesImg}
         imgSize="small"
-        text="This isn't just another job board—it’s about finding the right fit for both sides."
+        text="Looking for your next gig? This isn't just another job board—it’s about finding you the right fit."
       />
       <Features.Grid
         features={[

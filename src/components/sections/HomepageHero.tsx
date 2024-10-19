@@ -6,12 +6,12 @@ import { ChevronIcon } from '@components/icons/chevron';
 export const HomepageHero = () => (
   <Hero>
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      No spam, no AI, no ghost jobs,
-      <br className="hidden md:block" /> connect with intention.
+      Frosti is a better way to 
+      <br className="hidden md:block" /> find the right hires
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Welcome to the online career fair, find the
-      <br className="hidden md:block" /> the right company or right candidate.
+      Make it a relationship-building experience
+      <br className="hidden md:block" /> rather than a transactional one.
     </HeroSubtitle>
     <Button
       href="/wall"

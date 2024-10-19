@@ -21,26 +21,26 @@ export const SetDirection = () => {
       <Features.Main
         title={
           <>
-            Transform your
+            Recruiting made
             <br />
-            talent search
+            fun and meaningful
           </>
         }
         image={RoadmapImg}
         imgSize="small"
-        text="Let's connect you with candidates who are as invested in your mission as you are."
+        text="No inbox flooding—each candidate gets just 3 connect requests a day ensuring each one is deliberate and meaningful."
       />
       <Features.Grid
         features={[
           {
             icon: MultiTeamIcon,
             title: 'All Access.',
-            text: 'Reach candidates within your geographic preference.',
+            text: 'Reach all candidates within your geographic preference.',
           },
           {
             icon: PreparedIcon,
-            title: 'No Spam.',
-            text: 'Candidates are limited to 3 connects per day, so you don\'t get spammed',
+            title: 'Unlimited Connects.',
+            text: 'Candidates are limited to 3 per day, but recruiters are not.',
           },
           {
             icon: RoadmapsIcon,
