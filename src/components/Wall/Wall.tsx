@@ -10,19 +10,16 @@ const Wall: React.FC<WallProps> = ({ prospects, companies }) => {
 
                 {/* Employers Section */}
                 <div>
-                    <h2 className="text-2xl font-semibold mb-2">Employers</h2>
+                    <h2 className="text-2xl font-semibold mb-2">Recruiters/ Hiring Managers</h2>
                     <div className="space-y-4">
                         {companies && Array.from({ length: maxLength }).map((_, index) => (
                             <div key={index} className="flex items-center">
                                 {companies[index] ? (
                                     <>
                                         <span className="text-lg leading-tight text-white">{index + 1}.</span>
-                                        <div className="ml-4 flex flex-col">
-                                            <p className="text-lg leading-tight text-white">
-                                                {companies[index].name}
-                                                <span className="ml-2 text-sm" style={{ color: 'gray' }}>{companies[index].location}</span>
-                                            </p>
-                                        </div>
+                                        <p className="ml-4 text-lg leading-tight text-white ">
+                                            {companies[index].name}
+                                        </p>
                                     </>
                                 ) : (
                                     <span className="text-gray-400 hidden sm:inline"></span>

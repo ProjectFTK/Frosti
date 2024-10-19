@@ -44,7 +44,6 @@ const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects,
             if (!formData.email) newErrors.email = 'Email is required';
         } else if (selectedOption === 'employer') {
             if (!formData.name) newErrors.name = 'Name is required';
-            if (!formData.location) newErrors.location = 'Location is required';
             if (!formData.email) newErrors.email = 'Email is required';
         }
 
@@ -80,17 +79,15 @@ const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects,
             else {
                 WallApi.addCompanyAsync(formData as ICompany)
                     .then((response) => {
-                        formData.name && formData.location && companies ? setCompanies(
+                        formData.name && companies ? setCompanies(
                             [...companies, {
                                 name: formData.name,
-                                location: formData.location
                             }]
                         )
                             :
-                            formData.name && formData.location && setCompanies(
+                            formData.name && setCompanies(
                                 [{
                                     name: formData.name,
-                                    location: formData.location
                                 }]
                             )
                         setShowModal(false)
@@ -107,8 +104,24 @@ const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects,
     return (
         <div className="p-6 text-md flex items-center justify-center">
             <form className="py-8 rounded-lg shadow-md w-full max-w-lg" onSubmit={handleSubmit}>
-                {!selectedOption && <h2 className="text-xl font-bold mb-4">Select one:</h2>}
-                <div className="flex space-x-4 mb-4n">
+                {!selectedOption && <h2 className="text-xl font-bold mb-8 text-center">Which one are you?</h2>}
+                <div className="flex space-x-8 justify-center mb-4">
+                    <label
+                        className={`flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition duration-300 ${selectedOption === 'employer'
+                            ? 'border-purple-600'
+                            : 'border-gray-300 hover:border-purple-300'
+                            }`}
+                    >
+                        <input
+                            type="radio"
+                            name="option"
+                            value="employer"
+                            checked={selectedOption === 'employer'}
+                            onChange={() => handleOptionChange('employer')}
+                            className="hidden"
+                        />
+                        <span className="text-lg font-medium">Recruiter</span>
+                    </label>
                     <label
                         className={`flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition duration-300 ${selectedOption === 'prospect'
                             ? 'border-purple-600 '
@@ -125,27 +138,10 @@ const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects,
                         />
                         <span className="text-lg font-medium">Prospect</span>
                     </label>
-
-                    <label
-                        className={`flex flex-col items-center justify-center p-4 rounded-lg border cursor-pointer transition duration-300 ${selectedOption === 'employer'
-                            ? 'border-purple-600'
-                            : 'border-gray-300 hover:border-purple-300'
-                            }`}
-                    >
-                        <input
-                            type="radio"
-                            name="option"
-                            value="employer"
-                            checked={selectedOption === 'employer'}
-                            onChange={() => handleOptionChange('employer')}
-                            className="hidden"
-                        />
-                        <span className="text-lg font-medium">Employer</span>
-                    </label>
                 </div>
 
                 {/* Seeking Job Fields */}
-                {selectedOption === 'prospect' && (
+                {selectedOption && (
                     <div className="space-y-4 mt-4 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
                         <div>
                             <label className="">Pseudo-name</label>
@@ -159,51 +155,6 @@ const WallForm: React.FC<WallFormProps> = ({ prospects, companies, setProspects,
                                 required
                             />
                             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
-                        </div>
-                        <div>
-                            <label className="">Email</label>
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
-                                placeholder="Used to hold your place for launch"
-                                required
-                            />
-                            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
-                        </div>
-                    </div>
-                )}
-
-                {/* Employer Fields */}
-                {selectedOption === 'employer' && (
-                    <div className="space-y-4 mt-4 text-md translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-                        <div>
-                            <label className="">Company Name</label>
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name || ''}
-                                onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.name ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
-                                placeholder="Your company's name"
-                                required
-                            />
-                            {errors.companyName && <p className="text-red-500 text-sm">{errors.name}</p>}
-                        </div>
-                        <div>
-                            <label className="">Location</label>
-                            <input
-                                type="text"
-                                name="location"
-                                value={formData.location || ''}
-                                onChange={handleChange}
-                                className={`mt-1 p-2 block w-full border ${errors.location ? 'border-red-500' : 'border-gray-300'} rounded-md text-black`}
-                                placeholder="NYC, Remote etc."
-                                required
-                            />
-                            {errors.location && <p className="text-red-500 text-sm">{errors.location}</p>}
                         </div>
                         <div>
                             <label className="">Email</label>

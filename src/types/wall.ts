@@ -5,7 +5,6 @@ export interface  IProspect {
 
 export interface  ICompany {
     name: string;
-    location: string;
     email?: string;
 };
 
