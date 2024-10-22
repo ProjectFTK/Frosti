@@ -52,7 +52,7 @@ export default function Beta({
                 </div>
 
                 <p className={clsx('mt-2 mb-12 text-lg text-gray-300 md:text-xl')}>
-                    Join The Wall to boost your profile’s presence and match potential when we launch. Spread the word – the more people that join, the more companies will follow.
+                    If you're fed up with endless job boards and the impersonal process, this is your chance to change it. We’re flipping recruiting on its head, putting people first – not algorithms.
                 </p>
                 <div style={{ minHeight: '50vh' }}>
                     <Wall prospects={prospects} companies={companies} />

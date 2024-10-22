@@ -25,7 +25,7 @@ export const AvailableToday = () => {
             size="lg"
             className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
           >
-            Join the Wall
+            Join the Beta
             <Highlight>
               <ChevronIcon fill="currentColor" />
             </Highlight>
