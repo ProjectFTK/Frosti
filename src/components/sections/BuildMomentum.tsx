@@ -6,7 +6,6 @@ import { Features } from '@components/Features';
 import {
   ConfigurableIcon,
   ScheduledIcon,
-  DelaysIcon,
 } from '../icons/features/buildMomentum';
 
 import {
@@ -22,46 +21,46 @@ export const BuildMomentum = () => {
       <Features.Main
         title={
           <>
-            Employee attrition?
+            Thoughtful matches,
             <br />
-            Never heard of it.
+            real opportunities
           </>
         }
         image={CyclesImg}
         imgSize="small"
-        text="Keep employees engaged by promoting internal movement, and reduce the costly impact of turnover."
+        text="Looking for your next gig? This isn't just another job board—it’s about finding you the right fit."
       />
       <Features.Grid
         features={[
           {
-            icon: DelaysIcon,
-            title: 'Cut Hiring Costs.',
-            text: 'Fill roles internally to save up to 4x the annual salary of the hire.',
-          },
-          {
             icon: AutomatedBacklogIcon,
-            title: 'Protect Productivity.',
-            text: 'Fill roles with internal candidates who know the processes.',
+            title: 'Showcase Yourself.',
+            text: 'Highlight career goals, values, work style, and skills.',
           },
           {
             icon: CustomViewsIcon,
-            title: 'Prevent Burnout.',
-            text: 'Empower employees to take on exciting roles to avoid burnout.',
-          },
-          {
-            icon: DiscussionIcon,
-            title: 'Retain Knowledge.',
-            text: 'Foster internal mobility to keep valuable expertise.',
+            title: 'Thoughtful Applications.',
+            text: 'Limited to 3 applies a day—use them wisely.',
           },
           {
             icon: ScheduledIcon,
-            title: 'Streamline Onboarding.',
-            text: 'Internal hires reduce onboarding time and enhance cohesion.',
+            title: 'Timely Response.',
+            text: 'Employers must reply within 7 days.',
+          },
+          {
+            icon: ConfigurableIcon,
+            title: 'Targeted Matches.',
+            text: 'Use filters to align your experience with positions.',
+          },
+          {
+            icon: DiscussionIcon,
+            title: 'Tailored Introductions.',
+            text: 'Send personalized messages when you match with jobs.',
           },
           {
             icon: IssuesIcon,
-            title: 'Minimize Mis-Hire Risks.',
-            text: 'Promote proven employees into suitable roles to reduce risks.',
+            title: 'Fit First.',
+            text: 'Find jobs that match your values and work style.',
           },
         ]}
       />

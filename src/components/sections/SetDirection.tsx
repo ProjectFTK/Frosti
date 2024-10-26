@@ -15,61 +15,52 @@ import {
   PreparedIcon,
 } from '../icons/features/buildMomentum';
 
-import {
-  AutomatedBacklogIcon,
-  CustomViewsIcon,
-  DiscussionIcon,
-  IssuesIcon,
-  ParentSubIcon,
-  WorkflowsIcon,
-} from '@components/icons/features/issueTracking';
-
 export const SetDirection = () => {
   return (
     <Features color="40,87,255" colorDark="48,58,117">
       <Features.Main
         title={
           <>
-            Feeling stuck?
+            Recruiting made
             <br />
-            Let's change that.
+            fun and meaningful
           </>
         }
         image={RoadmapImg}
         imgSize="small"
-        text="Explore opportunities within your company so you can grow, learn, and advance your career without missing a beat."
+        text="No inbox flooding—each candidate gets just 3 connect requests a day ensuring each one is deliberate and meaningful."
       />
       <Features.Grid
         features={[
           {
-            icon: ParentSubIcon,
-            title: 'Explore Opportunities',
-            text: 'Discover new roles that match your interests and goals.',
+            icon: MultiTeamIcon,
+            title: 'All Access.',
+            text: 'Reach all candidates within your geographic preference.',
           },
           {
-            icon: MultiTeamIcon,
-            title: 'Cross-Team Connections',
-            text: 'Network effortlessly with colleagues across departments.',
+            icon: PreparedIcon,
+            title: 'Unlimited Connects.',
+            text: 'Candidates are limited to 3 per day, but recruiters are not.',
           },
           {
             icon: RoadmapsIcon,
-            title: 'Career Path Guidance',
-            text: 'Receive tailored recommendations for your career journey.',
-          },
-          {
-            icon: AutomatedBacklogIcon,
-            title: 'Reenergize Your Career',
-            text: 'Find fresh roles that reignite your passion and energy',
-          },
-          {
-            icon: InsightsIcon,
-            title: 'Seamless Transition',
-            text: 'Advance your career without having to start from scratch.',
+            title: 'Culture Alignment.',
+            text: 'Ensure a cultural fit from the first interaction.',
           },
           {
             icon: TimelineIcon,
-            title: 'Strategic Connects',
-            text: 'Limited to 3 connect requests daily—make each one count.',
+            title: 'Excite Candidates.',
+            text: 'Send personalized messages to spark genuine interest.',
+          },
+          {
+            icon: InsightsIcon,
+            title: 'Quality Candidates.',
+            text: 'Engage with pre-filtered candidates who meet your criteria.',
+          },
+          {
+            icon: NotificationsIcon,
+            title: 'Pay-Per-Hire.',
+            text: 'Only pay when you successfully fill the role.',
           },
         ]}
       />
