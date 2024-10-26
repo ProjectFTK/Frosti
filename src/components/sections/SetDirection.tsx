@@ -15,52 +15,61 @@ import {
   PreparedIcon,
 } from '../icons/features/buildMomentum';
 
+import {
+  AutomatedBacklogIcon,
+  CustomViewsIcon,
+  DiscussionIcon,
+  IssuesIcon,
+  ParentSubIcon,
+  WorkflowsIcon,
+} from '@components/icons/features/issueTracking';
+
 export const SetDirection = () => {
   return (
     <Features color="40,87,255" colorDark="48,58,117">
       <Features.Main
         title={
           <>
-            Recruiting made
+            Feeling stuck?
             <br />
-            fun and meaningful
+            Let's change that.
           </>
         }
         image={RoadmapImg}
         imgSize="small"
-        text="No inbox flooding—each candidate gets just 3 connect requests a day ensuring each one is deliberate and meaningful."
+        text="Explore opportunities within your company so you can grow, learn, and advance your career without missing a beat."
       />
       <Features.Grid
         features={[
           {
-            icon: MultiTeamIcon,
-            title: 'All Access.',
-            text: 'Reach all candidates within your geographic preference.',
+            icon: ParentSubIcon,
+            title: 'Explore Opportunities',
+            text: 'Discover new roles that match your interests and goals.',
           },
           {
-            icon: PreparedIcon,
-            title: 'Unlimited Connects.',
-            text: 'Candidates are limited to 3 per day, but recruiters are not.',
+            icon: MultiTeamIcon,
+            title: 'Cross-Team Connections',
+            text: 'Network effortlessly with colleagues across departments.',
           },
           {
             icon: RoadmapsIcon,
-            title: 'Culture Alignment.',
-            text: 'Ensure a cultural fit from the first interaction.',
+            title: 'Career Path Guidance',
+            text: 'Receive tailored recommendations for your career journey.',
           },
           {
-            icon: TimelineIcon,
-            title: 'Excite Candidates.',
-            text: 'Send personalized messages to spark genuine interest.',
+            icon: AutomatedBacklogIcon,
+            title: 'Reenergize Your Career',
+            text: 'Find fresh roles that reignite your passion and energy',
           },
           {
             icon: InsightsIcon,
-            title: 'Quality Candidates.',
-            text: 'Engage with pre-filtered candidates who meet your criteria.',
+            title: 'Seamless Transition',
+            text: 'Advance your career without having to start from scratch.',
           },
           {
-            icon: NotificationsIcon,
-            title: 'Pay-Per-Hire.',
-            text: 'Only pay when you successfully fill the role.',
+            icon: TimelineIcon,
+            title: 'Strategic Connects',
+            text: 'Limited to 3 connect requests daily—make each one count.',
           },
         ]}
       />

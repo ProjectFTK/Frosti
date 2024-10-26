@@ -6,12 +6,12 @@ import { ChevronIcon } from '@components/icons/chevron';
 export const HomepageHero = () => (
   <Hero>
     <HeroTitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
-      Frosti is a better way to
-      <br className="hidden md:block" /> find the right hires
+      Network internally.
+      <br className="hidden md:block" /> Make moves.
     </HeroTitle>
     <HeroSubtitle className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-      Make it a relationship-building experience
-      <br className="hidden md:block" /> rather than a transactional one.
+      Connect with the team leaders,
+      <br className="hidden md:block" /> and find your next role within the company.
     </HeroSubtitle>
     <Button
       href="/wall"
@@ -19,7 +19,7 @@ export const HomepageHero = () => (
       size="lg"
       className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]"
     >
-      Join the Beta
+      Get Started
       <Highlight>
         <ChevronIcon fill="currentColor" />
       </Highlight>
