@@ -32,10 +32,10 @@ export const Header = () => {
         <Link href="/" className="flex items-center text-lg">
           <Image
             src={AppImg}
-            alt="Frosti app icon"
+            alt="Ladderal app icon"
             width={50}
             className="mr-2"
-          /> Frosti
+          /> Ladderal
         </Link>
         <div className="ml-auto flex h-full items-center">
           {

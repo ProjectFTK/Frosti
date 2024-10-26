@@ -21,7 +21,7 @@ export const Footer = () => {
                 >
                   Contact Us
                 </a>
-                <span>{'© Frosti. All rights reserved.'}</span>
+                <span>{'© Ladderal. All rights reserved.'}</span>
               </div>
             </div>
           </div>

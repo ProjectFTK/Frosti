@@ -10,11 +10,11 @@ export const AvailableToday = () => {
       <div className="flex flex-col items-center justify-center gap-10 pb-16 text-center">
         <Image
           src={AppImg}
-          alt="Frosti app icon"
+          alt="Ladderal app icon"
           className="h-[12.8rem] w-[12.8rem]"
         />
         <h1 className="text-gradient text-5xl md:text-8xl">
-          Built for the future.
+          Made for fulfillment.
           <br />
           Coming soon.
         </h1>
